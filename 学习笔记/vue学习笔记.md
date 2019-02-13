@@ -19,4 +19,3 @@
 2. 指令
 
 3. \$attrs  \$listeners inhertAttrs $parent
-

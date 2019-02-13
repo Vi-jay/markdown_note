@@ -52,3 +52,41 @@
    ```
 
    
+
+### 基础知识
+
+1. ie盒模型和标准盒子模型区别:
+   1. ie盒模型是 content +padding+border 即:border-box
+   2. 标准盒模型是 content 即:content-box
+   3. 盒子模型由margin padding content border组成
+
+2. background-attachment
+   1. fixed 内容滚动，背景固定
+   2. scroll 内容滚动，背景跟随滚动`默认`
+
+3. text-indent 文本缩进
+
+4. background-position
+
+   1. 可以使用 left right 来指定背景紧贴位置
+   2. 可以使用 left  10px right 10px 来指定紧贴位置间距
+   3. 可以指定 10px 10px 默认是 从left top计算
+
+5. 媒体查询（响应式）
+
+   ```css
+   @media screen and (max-width:800px) /*当宽度小于800时应用*/
+   @media screen and (min-width:800px) /*当宽度大于800时应用*/
+   ```
+
+6. 渐变
+
+7. clip裁剪
+
+8. align-content
+
+9. animation
+
+10. background-origin与background-clip
+
+11. 
