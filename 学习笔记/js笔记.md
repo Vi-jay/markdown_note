@@ -51,13 +51,37 @@
 
 
 
-### 其他
+### 基础
 
 1. Object.defineProperty属性配置
    1. writeable,value无法与get set一起使用
    2. enumerable 设置是否可遍历该属性 默认是false
+
 2. 函数和变量声明会提升到代码最前面，**如果函数和变量同名 则函数优先**
-3. 
+
+3. 判断一个变量是否声明可以使用typeof 有保护机制，可以判断出未声明的变量
+
+4. Object.prototype.toString.call(arr) === "[object Array]"判断一个变量的类型
+
+5. apply call bind区别
+   1. apply第二个参数接收一个参数数组作为函数参数
+   2. call第2~n个参数都作为函数参数
+   3. bind与call一样 不同的是 bind是返回一个绑定this后的对象 不是立即执行
+
+6. 事件流
+
+   1. 捕获阶段(从外到里) -> 冒泡阶段(从里到外)
+   2. addEventListener第三个参数false则为冒泡，true为捕获，默认为冒泡事件
+   3. `e.stopPropatation()`取消冒泡，`e.preventDefault()`阻止浏览器默认行为（如表单提交等）
+
+7. 事件代理（委托）
+
+   > 给最外层的节点绑定事件，然后根据event.target来获取到触发事件的目标，进行处理委托任务
+
+8. 跨域
+
+   1. jsonp
+   2. `"Access-Control-Allow-Origin", "*"`服务端设置允许指定源访问
 
 
 
