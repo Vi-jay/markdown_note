@@ -43,6 +43,12 @@
 
 5. 双向绑定
 
+   > 利用DocumentFragment劫持目标DOM的子元素，然后操作被劫持DocumentFragment里的子元素，最后将DocumentFragment替换原DOM，完成批量DOM操作
+
+   1. Object.defineProperty进行监听数据的getset
+   2. 在vue初始化时 使用DocumentFragment编译HTML，绑定指令和{{}}
+   3. 使用发布者/订阅者模式 将发布者相关的属性(例如v-bind)进行订阅，在v-model绑定的元素事件中进行发布
+
 6. vue-router实现
 
 7. 作用域链
