@@ -51,6 +51,9 @@
 
 6. vue-router实现
 
-7. 作用域链
+   1. history模式是采用pushState popState + onpopstate事件组成的
+   2. hash模式是采用 onhashchange事件组成
 
-8. vue生命周期
+7. vue生命周期
+
+   1. create->mount->update->destory
