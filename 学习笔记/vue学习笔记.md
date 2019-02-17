@@ -57,3 +57,44 @@
 7. vue生命周期
 
    1. create->mount->update->destory
+
+8. 纯组件（无状态组件,无法注入其他组件）
+
+   1. 在tamplate上设置functional属性即可，或者在实例属性上设置functional:true
+
+9. 动态渲染组件
+
+   ```vue
+   <span :is="cmpName">
+       asd
+   </span>
+   <script>
+       components: {UnderlineText, Test2},
+       data() {
+           return {
+               cmpName: "underline-text"
+           }
+       }
+   </script>
+   ```
+
+10. provide,inject
+
+    > 提供了跨组件调用祖先实例api的能力
+
+    ```vue
+    //parent
+    provide() {
+        return {
+        changeMsg: this.changeMsg
+        }
+    }
+    
+    //child
+    inject:["changeMsg"]
+    <button @click="changeMsg('msg')">btn</button>
+    
+    ```
+
+    
+

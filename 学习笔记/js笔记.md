@@ -87,7 +87,58 @@
 
 9. 正则
 
-10. 
+   1. replace
+
+      ```javascript
+      const str = "as13d";
+      const formatStr = str.replace(/\d+/, (num) => num * 2);
+      console.log(formatStr);
+      ```
+
+   2. test
+
+      ```javascript
+      const str = "as13d";
+      const reg = /s(\d+)(d)$/;
+      console.log(reg.test(str));//true
+      console.log(RegExp.$1); //13
+      console.log(RegExp.$2); //d
+      ```
+
+   3. exec 
+
+      > 全局模式下，可顺序捕获多次
+
+      ```javascript
+      const str = "as13das26d";
+      const reg = /s(\d+)/g;
+      const res = reg.exec(str);
+      console.log(res); //[ 's13d', '13', 'd', index: 1, input: 'as13d', groups: undefined ]
+      const res2 = reg.exec(str);
+      console.log(res2); //[ 's13d', '13', 'd', index: 1, input: 'as13d', groups: undefined ]
+      ```
+
+   4. for in 和for of区别是，for in 会把数组的属性也遍历出来，for of只会遍历数组的项
+
+   5. 节流
+
+      > 利用闭包缓存开关变量，在指定时间后打开开关，在开关打开后执行函数并关闭开关
+
+      ```javascript
+      function throttling(fn, timeout) {
+          let timer = null;
+          return function () {
+              if (!timer) {
+                  fn.apply(this, Array.from(arguments));
+                  timer = setTimeout(_ => timer = null, timeout);
+              }
+          }
+      }
+      ```
+
+      
+
+   
 
 
 

@@ -176,4 +176,52 @@
 }
 ```
 
-11. 
+11. 波浪动画
+
+    > 要点:
+    >
+    > 填充主颜色，after before重叠，并为另外两个颜色，将after before 动画时间 圆角 错落开 错落的颜色就形成了波浪
+    >
+    > tips: animation-delay可以设置为负数，以方便提前产生错落
+
+    ```scss
+    .wave {
+        position: relative;
+        width: 200px;
+        height: 200px;
+        background-color: rgb(118, 218, 255);
+        margin: 200px;
+        overflow: hidden;
+        &::before,
+        &::after{
+            content: "";
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            top: 0;
+            left: 50%;
+            background-color: rgba(201, 211, 255, 0.4);
+            border-radius: 45%;
+            transform: translate(-50%, -70%) rotate(0);
+            animation: rotate 6s linear infinite;
+            z-index: 10;
+        }
+    
+        &::after {
+            border-radius: 47%;
+            background-color: rgba(255, 255, 255, .9);
+            animation: rotate 10s linear -5s infinite;
+            z-index: 20;
+        }
+    }
+    
+    @keyframes rotate {
+        50% {
+            transform: translate(-50%, -73%) rotate(180deg);
+        } 100% {
+            transform: translate(-50%, -70%) rotate(360deg);
+        }
+    }
+    ```
+
+    
