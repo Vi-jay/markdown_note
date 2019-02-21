@@ -6,31 +6,33 @@
    2. 标准盒模型是 content 即:content-box
    3. 盒子模型由margin padding content border组成
 
-2. background-attachment
+2. **内联元素不能设置宽高度（尺寸）及上下边距**，内联盒子可以设置
+
+3. background-attachment
 
    1. fixed 内容滚动，背景固定
    2. scroll 内容滚动，背景跟随滚动`默认`
 
-3. text-indent 文本缩进
+4. text-indent 文本缩进
 
-4. background-position
+5. background-position
 
    1. 可以使用 left right 来指定背景紧贴位置
    2. 可以使用 left  10px right 10px 来指定紧贴位置间距
    3. 可以指定 10px 10px 默认是 从left top计算
 
-5. 媒体查询（响应式）
+6. 媒体查询（响应式）
 
    ```css
    @media screen and (max-width:800px) /*当宽度小于800时应用*/
    @media screen and (min-width:800px) /*当宽度大于800时应用*/
    ```
 
-6. align-content
+7. align-content
 
    > 在**多行**的情况下使用，效果与align-items相同
 
-7. animation
+8. animation
 
    ```Scss
    animation: rotate 2s linear 3;
@@ -44,11 +46,11 @@
 
    
 
-8. background-clip
+9. background-clip
 
    > 默认是border-box,即背景从边框底下开始显示
 
-9. flex相关
+10. flex相关
 
    ```scss
    flex-grow: 1; //每个项占有容器的面积比例
@@ -56,5 +58,5 @@
    flex-basis: 100%; //当项小于容器时放大的比例
    ```
 
-10. flex**横向排列时会将每个项的高度自动铺满**，不要手动设置height:100%;因为 如果父容器的高度是又某个项撑起的话 **那父容器是没有尺寸高度的**，那么height:100%反而会不现实高度
+11. flex**横向排列时会将每个项的高度自动铺满**，不要手动设置height:100%;因为 如果父容器的高度是又某个项撑起的话 **那父容器是没有尺寸高度的**，那么height:100%反而会不现实高度
 

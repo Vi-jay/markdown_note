@@ -80,21 +80,21 @@
 
 10. provide,inject
 
-    > 提供了跨组件调用祖先实例api的能力
+   > 提供了跨组件调用祖先实例api的能力
 
-    ```vue
-    //parent
-    provide() {
-        return {
-        changeMsg: this.changeMsg
-        }
-    }
-    
-    //child
-    inject:["changeMsg"]
-    <button @click="changeMsg('msg')">btn</button>
-    
-    ```
+   ```vue
+   //parent
+   provide() {
+       return {
+       changeMsg: this.changeMsg
+       }
+   }
+   
+   //child
+   inject:["changeMsg"]
+   <button @click="changeMsg('msg')">btn</button>
+   
+   ```
 
-    
+11. [vue项目优化](https://juejin.im/post/5c4a6fcd518825469414e062#heading-28)
 
