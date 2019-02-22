@@ -96,5 +96,5 @@
     
     ```
 
-    
+11. [animate.css动画库使用](https://www.w3cplus.com/vue/vue-animation.html)
 
