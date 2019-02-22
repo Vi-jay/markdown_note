@@ -225,3 +225,11 @@
     ```
 
     
+
+
+
+### 基础
+
+
+
+1. `object-fit`属性可以让img实现background-size:contain等效果，其意义为内容元素的包裹行为

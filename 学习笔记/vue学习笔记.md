@@ -97,4 +97,5 @@
    ```
 
 11. [vue项目优化](https://juejin.im/post/5c4a6fcd518825469414e062#heading-28)
+12. [animate.css动画库使用](https://www.w3cplus.com/vue/vue-animation.html)
 
